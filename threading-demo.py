@@ -17,6 +17,9 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
     # .map return an iterator that applies function to every item of iterable,
     results = executor.map(do_something, secs)
 
+    print(type(results))
+
+    # loop throguh the iterable and get the results
     for result in results:
         print(result)
 
